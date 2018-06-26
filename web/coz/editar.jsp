@@ -1,17 +1,12 @@
-<%-- 
-    Document   : editar
-    Created on : Jun 25, 2018, 12:39:37 PM
-    Author     : gsf
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<p>Editar alimento</p>
+<form method="POST" action="../FrontController?action=EditarAlimento">
+    <p>
+        Identificador do alimento: <input type="text" name="id_Alimento" size="50">
+    </p>
+    <p>
+        Nome do alimento: <input type="text" name="nomeAlimento" size="20">
+    </p>
+    <p>
+        <input type="submit" value="Submit" target="frame">
+    </p>
+</form>

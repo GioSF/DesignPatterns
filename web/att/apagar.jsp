@@ -1,17 +1,9 @@
-<%-- 
-    Document   : apagar
-    Created on : Jun 25, 2018, 12:40:00 PM
-    Author     : gsf
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<p>Apagar pedido</p>
+<form method="POST" action="../FrontController?action=ApagarPedido">
+    <p>
+        Identificador do Pedido: <input type="text" name="id_Pedido" size="50">
+    </p>
+    <p>
+        <input type="submit" value="Submit" target="frame">
+    </p>
+</form>

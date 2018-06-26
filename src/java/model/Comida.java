@@ -11,90 +11,80 @@ package model;
  */
 public class Comida {
     
-    private int id;
-    private String nome;
-    private String tipoComida;
-    private float valor;
-    private int qdade;
-    
-    public Comida(){};
-    
-    public Comida(int id, String nome, String tipoComida, float valor){
-        this.id = id;
-        this.nome = nome;
-        this.tipoComida = tipoComida;
-        this.valor = valor;
+    private int id_Comida;
+    private String nomeComida;
+    private int id_Cozinha;
+    private float valorComida;
+    private int qdadeComida;
+
+    /**
+     * @return the id_Comida
+     */
+    public int getId_Comida() {
+        return id_Comida;
     }
 
     /**
-     * @return the id
+     * @param id_Comida the id_Comida to set
      */
-    public int getId() {
-        return id;
+    public void setId_Comida(int id_Comida) {
+        this.id_Comida = id_Comida;
     }
 
     /**
-     * @param id the id to set
+     * @return the nomeComida
      */
-    public void setId(int id) {
-        this.id = id;
+    public String getNomeComida() {
+        return nomeComida;
     }
 
     /**
-     * @return the nome
+     * @param nomeComida the nomeComida to set
      */
-    public String getNome() {
-        return nome;
+    public void setNomeComida(String nomeComida) {
+        this.nomeComida = nomeComida;
     }
 
     /**
-     * @param nome the nome to set
+     * @return the id_Cozinha
      */
-    public void setNome(String nome) {
-        this.nome = nome;
+    public int getId_Cozinha() {
+        return id_Cozinha;
     }
 
     /**
-     * @return the tipo
+     * @param id_Cozinha the id_Cozinha to set
      */
-    public String getTipoComida() {
-        return tipoComida;
+    public void setId_Cozinha(int id_Cozinha) {
+        this.id_Cozinha = id_Cozinha;
     }
 
     /**
-     * @param tipo the tipo to set
+     * @return the valorComida
      */
-    public void setTipoComida(String tipoComida) {
-        this.tipoComida = tipoComida;
+    public float getValorComida() {
+        return valorComida;
     }
 
     /**
-     * @return the valor
+     * @param valorComida the valorComida to set
      */
-    public float getValor() {
-        return valor;
+    public void setValorComida(float valorComida) {
+        this.valorComida = valorComida;
     }
 
     /**
-     * @param valor the valor to set
+     * @return the qdadeComida
      */
-    public void setValor(float valor) {
-        this.valor = valor;
+    public int getQdadeComida() {
+        return qdadeComida;
     }
 
     /**
-     * @return the qdade
+     * @param qdadeComida the qdadeComida to set
      */
-    public int getQdade() {
-        return qdade;
+    public void setQdadeComida(int qdadeComida) {
+        this.qdadeComida = qdadeComida;
     }
-
-    /**
-     * @param qdade the qdade to set
-     */
-    public void setQdade(int qdade) {
-        this.qdade = qdade;
-    }
-    
     
 }

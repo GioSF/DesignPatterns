@@ -1,17 +1,26 @@
-<%-- 
-    Document   : listar
-    Created on : Jun 25, 2018, 12:39:49 PM
-    Author     : gsf
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table">
+                <div class="row header">
+                    <div class="cell">
+                        Identificador
+                    </div>
+                    <div class="cell">
+                        Pedido
+                    </div>
+                </div>
+                <c:forEach items="${pedidos}" var="pedido">
+                    <div class="row">
+                        <div class="cell" data-title="id">
+                            ${pedido.id_Pedido}
+                        </div>
+                        <div class="cell" data-title="nome">
+                            ${pedido.nomePedido}
+                        </div>
+                    </div>
+                </c:forEach>
+            </div>
+        </div>
+    </div>
+</div>    

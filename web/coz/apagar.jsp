@@ -1,17 +1,12 @@
-<%-- 
-    Document   : apagar
-    Created on : Jun 25, 2018, 12:40:00 PM
-    Author     : gsf
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<p>Apagar alimento</p>
+<form method="POST" action="../FrontController?action=ApagarAlimento">
+    <p>
+        Identificador do alimento: <input type="text" name="id_alimento" size="50">
+    </p>
+    <p>
+        Nome do alimento: <input type="text" name="nomeAlimento" size="20">
+    </p>
+    <p>
+        <input type="submit" value="Submit" target="frame">
+    </p>
+</form>

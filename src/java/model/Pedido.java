@@ -15,6 +15,8 @@ public class Pedido {
     
     private ArrayList<Comida> comidas;
     private String state;
+    private int id_Cliente;
+    private int id_Pedido;
 
     /**
      * @return the comidas
@@ -42,6 +44,34 @@ public class Pedido {
      */
     public void setState(String state) {
         this.state = state;
+    }
+
+    /**
+     * @return the id_Cliente
+     */
+    public int getId_Cliente() {
+        return id_Cliente;
+    }
+
+    /**
+     * @param id_Cliente the id_Cliente to set
+     */
+    public void setId_Cliente(int id_Cliente) {
+        this.id_Cliente = id_Cliente;
+    }
+
+    /**
+     * @return the id_Pedido
+     */
+    public int getId_Pedido() {
+        return id_Pedido;
+    }
+
+    /**
+     * @param id_Pedido the id_Pedido to set
+     */
+    public void setId_Pedido(int id_Pedido) {
+        this.id_Pedido = id_Pedido;
     }
 
 }

@@ -7,16 +7,16 @@
                         Identificador
                     </div>
                     <div class="cell">
-                        Alimento
+                        Comida
                     </div>
                 </div>
-                <c:forEach items="${alimentos}" var="alimento">
+                <c:forEach items="${comidas}" var="comida">
                     <div class="row">
                         <div class="cell" data-title="id">
-                            ${alimento.id_Alimento}
+                            ${comida.id_Comida}
                         </div>
                         <div class="cell" data-title="nome">
-                            ${alimento.nomeAlimento}
+                            ${comida.nomeComida}
                         </div>
                     </div>
                 </c:forEach>
