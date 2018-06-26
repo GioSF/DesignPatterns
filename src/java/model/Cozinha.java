@@ -16,6 +16,10 @@ public class Cozinha {
     private ArrayList<Pedido> pedidos;
     private String nomeCozinha;
     private int id_Cozinha;
+    
+    public Cozinha(String nomeCozinha){
+        nomeCozinha = this.nomeCozinha;
+    }
 
     /**
      * @return the pedidos

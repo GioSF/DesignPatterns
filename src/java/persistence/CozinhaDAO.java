@@ -28,17 +28,15 @@ public class CozinhaDAO {
     private CozinhaDAO() {
     }
 
-    public void save(Cozinha cozinha, String estado) throws SQLException, ClassNotFoundException {
+    public void save(Cozinha cozinha) throws SQLException, ClassNotFoundException {
         System.out.println("persistence.CozinhaDAO.save()");
         Connection conn = null;
         Statement st = null;
         try {
             conn = DatabaseLocator.getInstance().getConnection();
             st = conn.createStatement();
-            st.execute("INSERT INTO Cozinha(id_Cozinha, nomeCozinha)"
+            st.execute("INSERT INTO Cozinha(nomeCozinha)"
                     + "VALUES ('"
-                    + cozinha.getId_Cozinha()
-                    + "', '"
                     + cozinha.getNomeCozinha()
                     + "')");
         } catch (SQLException e) {
@@ -62,81 +60,81 @@ public class CozinhaDAO {
         }
     }
 
-    public Cozinha get(Cozinha cozinha) throws SQLException, ClassNotFoundException {
-        Connection conn = null;
-        Statement st = null;
-        Cozinha cozinhaResult = new Cozinha();
-
-        try {
-            conn = DatabaseLocator.getInstance().getConnection();
-            st = conn.createStatement();
-
-            ResultSet rs = st.executeQuery("SELECT * FROM Cozinha AS c WHERE c.nomeCozinha = \""
-                    + cozinha.getNomeCozinha()+ "\"");
-            while (rs.next()) {
-                cozinhaResult.setId_Cozinha(Integer.parseInt(rs.getString("c.id_Cozinha")));
-                cozinhaResult.setNomeCozinha(rs.getString("c.nomeCozinha"));
-//                funcionario.setState(rs.getString("f.estado"));
-//                funcionario.memento = rs.getString("f.memento");
-            }
-
-            return cozinhaResult;
-        } catch (SQLException e) {
-            throw e;
-        } finally {
-            closeResourcer(conn, st);
-        }
-    }
-
-    public List<Cozinha> getAll() throws SQLException, ClassNotFoundException {
-        Connection conn = null;
-        Statement st = null;
-
-        List<Cozinha> cozinhasList = new ArrayList<Cozinha>();
-
-        try {
-            conn = DatabaseLocator.getInstance().getConnection();
-            st = conn.createStatement();
-
-            ResultSet rs = st.executeQuery("SELECT * FROM Cozinha AS c");
-
-            while (rs.next()) {
-                Cozinha cozinha = new Cozinha();
-                cozinha.setNomeCozinha(rs.getString("c.nomeCozinha"));
-                cozinha.setId_Cozinha(Integer.parseInt((rs.getString("c.id_Cozinha"))));
-                cozinhasList.add(cozinha);
-            }
-
-            return cozinhasList;
-        } catch (SQLException e) {
-            throw e;
-        } finally {
-            closeResourcer(conn, st);
-        }
-    }
-
-    public void editar(Cozinha cozinha) throws SQLException, ClassNotFoundException {
-        Connection conn = null;
-        Statement st = null;
-
-        try {
-            conn = DatabaseLocator.getInstance().getConnection();
-            st = conn.createStatement();
-
-            st.execute(
-                    "UPDATE Cozinha AS c"
-                    + " SET nomeCozinha ='"
-                    + cozinha.getNomeCozinha()
-                    + "' WHERE c.id_Cozinha = '"
-                    + cozinha.getId_Cozinha()+ "'"
-            );
-
-        } catch (SQLException e) {
-            throw e;
-        } finally {
-            closeResourcer(conn, st);
-        }
-    }
+//    public Cozinha get(Cozinha cozinha) throws SQLException, ClassNotFoundException {
+//        Connection conn = null;
+//        Statement st = null;
+//        Cozinha cozinhaResult = new Cozinha();
+//
+//        try {
+//            conn = DatabaseLocator.getInstance().getConnection();
+//            st = conn.createStatement();
+//
+//            ResultSet rs = st.executeQuery("SELECT * FROM Cozinha AS c WHERE c.nomeCozinha = \""
+//                    + cozinha.getNomeCozinha()+ "\"");
+//            while (rs.next()) {
+//                cozinhaResult.setId_Cozinha(Integer.parseInt(rs.getString("c.id_Cozinha")));
+//                cozinhaResult.setNomeCozinha(rs.getString("c.nomeCozinha"));
+////                funcionario.setState(rs.getString("f.estado"));
+////                funcionario.memento = rs.getString("f.memento");
+//            }
+//
+//            return cozinhaResult;
+//        } catch (SQLException e) {
+//            throw e;
+//        } finally {
+//            closeResourcer(conn, st);
+//        }
+//    }
+//
+//    public List<Cozinha> getAll() throws SQLException, ClassNotFoundException {
+//        Connection conn = null;
+//        Statement st = null;
+//
+//        List<Cozinha> cozinhasList = new ArrayList<Cozinha>();
+//
+//        try {
+//            conn = DatabaseLocator.getInstance().getConnection();
+//            st = conn.createStatement();
+//
+//            ResultSet rs = st.executeQuery("SELECT * FROM Cozinha AS c");
+//
+//            while (rs.next()) {
+//                Cozinha cozinha = new Cozinha();
+//                cozinha.setNomeCozinha(rs.getString("c.nomeCozinha"));
+//                cozinha.setId_Cozinha(Integer.parseInt((rs.getString("c.id_Cozinha"))));
+//                cozinhasList.add(cozinha);
+//            }
+//
+//            return cozinhasList;
+//        } catch (SQLException e) {
+//            throw e;
+//        } finally {
+//            closeResourcer(conn, st);
+//        }
+//    }
+//
+//    public void editar(Cozinha cozinha) throws SQLException, ClassNotFoundException {
+//        Connection conn = null;
+//        Statement st = null;
+//
+//        try {
+//            conn = DatabaseLocator.getInstance().getConnection();
+//            st = conn.createStatement();
+//
+//            st.execute(
+//                    "UPDATE Cozinha AS c"
+//                    + " SET nomeCozinha ='"
+//                    + cozinha.getNomeCozinha()
+//                    + "' WHERE c.id_Cozinha = '"
+//                    + cozinha.getId_Cozinha()+ "'"
+//            );
+//
+//        } catch (SQLException e) {
+//            throw e;
+//        } finally {
+//            closeResourcer(conn, st);
+//        }
+//    }
 //
 //    public void updateEstado(Funcionario funcionario) throws SQLException, ClassNotFoundException {
 //        Connection conn = null;
